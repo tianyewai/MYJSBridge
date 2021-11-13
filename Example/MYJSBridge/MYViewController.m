@@ -8,8 +8,12 @@
 
 #import "MYViewController.h"
 
-@interface MYViewController ()
+#import "TestBridge+Common.h"
+#import <MYJSBridge/MYJSBridge.h>
 
+@interface MYViewController ()<WKUIDelegate>
+
+@property (nonatomic, strong) MYWKWebView *webView;
 @end
 
 @implementation MYViewController
@@ -17,13 +21,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.webView = [[MYWKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.webView.MYUIDelegate = self;
+    TestBridge *bridge = [[TestBridge alloc] init];
+    [self.webView addJavascriptObject:bridge forNamespace:nil];
+
+    NSString *basePath = [[NSBundle mainBundle] pathForResource:@"testApp" ofType:@""];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"testApp/native" ofType:@"html"];
+    [self.webView loadFilePath:path basePath:basePath];
+
+    [self.view addSubview:self.webView];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - WKUIDelegate
+
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message
+initiatedByFrame:(WKFrameInfo *)frame
+completionHandler:(void (^)(void))completionHandler
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIAlertView *alertView =
+    [[UIAlertView alloc] initWithTitle:@"提示"
+                               message:message
+                              delegate:self
+                     cancelButtonTitle:@"确定"
+                     otherButtonTitles:nil,nil];
+    [alertView show];
+
+    completionHandler();
 }
 
 @end

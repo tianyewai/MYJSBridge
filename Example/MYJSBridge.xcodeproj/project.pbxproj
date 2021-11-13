@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		149D8A4DFF3A38B5933DA978 /* Pods_MYJSBridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D898281686874F1C0205A3 /* Pods_MYJSBridge_Tests.framework */; };
+		240A8E03273FE34500EBB82F /* TestBridge+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 240A8DFF273FE34500EBB82F /* TestBridge+Common.m */; };
+		240A8E04273FE34500EBB82F /* TestBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 240A8E01273FE34500EBB82F /* TestBridge.m */; };
+		240A8E25273FE3E400EBB82F /* testApp in Resources */ = {isa = PBXBuildFile; fileRef = 240A8E24273FE3E400EBB82F /* testApp */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,7 +41,12 @@
 
 /* Begin PBXFileReference section */
 		03F061C261342526D0172B53 /* Pods-MYJSBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYJSBridge_Example.release.xcconfig"; path = "Target Support Files/Pods-MYJSBridge_Example/Pods-MYJSBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1C2E1D57A5F92D45F66536FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1C2E1D57A5F92D45F66536FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		240A8DFF273FE34500EBB82F /* TestBridge+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestBridge+Common.m"; sourceTree = "<group>"; };
+		240A8E00273FE34500EBB82F /* TestBridge+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestBridge+Common.h"; sourceTree = "<group>"; };
+		240A8E01273FE34500EBB82F /* TestBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBridge.m; sourceTree = "<group>"; };
+		240A8E02273FE34500EBB82F /* TestBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBridge.h; sourceTree = "<group>"; };
+		240A8E24273FE3E400EBB82F /* testApp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testApp; sourceTree = SOURCE_ROOT; };
 		2781C9852AA8EA8F40979369 /* Pods_MYJSBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYJSBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F37BE734F88F2FD17C83067 /* Pods-MYJSBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYJSBridge_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MYJSBridge_Tests/Pods-MYJSBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MYJSBridge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYJSBridge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,8 +72,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92D898281686874F1C0205A3 /* Pods_MYJSBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MYJSBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E7E446069E8A150E6D44EB /* Pods-MYJSBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYJSBridge_Example.debug.xcconfig"; path = "Target Support Files/Pods-MYJSBridge_Example/Pods-MYJSBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DF8A3BFD3554FCF56E7C2CC5 /* MYJSBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MYJSBridge.podspec; path = ../MYJSBridge.podspec; sourceTree = "<group>"; };
-		E9745E3F780867B3D91AA649 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DF8A3BFD3554FCF56E7C2CC5 /* MYJSBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MYJSBridge.podspec; path = ../MYJSBridge.podspec; sourceTree = "<group>"; };
+		E9745E3F780867B3D91AA649 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FC427B1B816BDBA801846FCF /* Pods-MYJSBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MYJSBridge_Tests.release.xcconfig"; path = "Target Support Files/Pods-MYJSBridge_Tests/Pods-MYJSBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,11 +140,16 @@
 		6003F593195388D20070C39A /* Example for MYJSBridge */ = {
 			isa = PBXGroup;
 			children = (
+				240A8E24273FE3E400EBB82F /* testApp */,
 				6003F59C195388D20070C39A /* MYAppDelegate.h */,
 				6003F59D195388D20070C39A /* MYAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MYViewController.h */,
 				6003F5A6195388D20070C39A /* MYViewController.m */,
+				240A8E02273FE34500EBB82F /* TestBridge.h */,
+				240A8E01273FE34500EBB82F /* TestBridge.m */,
+				240A8E00273FE34500EBB82F /* TestBridge+Common.h */,
+				240A8DFF273FE34500EBB82F /* TestBridge+Common.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -193,7 +206,6 @@
 				2F37BE734F88F2FD17C83067 /* Pods-MYJSBridge_Tests.debug.xcconfig */,
 				FC427B1B816BDBA801846FCF /* Pods-MYJSBridge_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +270,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -277,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				240A8E25273FE3E400EBB82F /* testApp in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -367,6 +381,8 @@
 				6003F59E195388D20070C39A /* MYAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MYViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				240A8E03273FE34500EBB82F /* TestBridge+Common.m in Sources */,
+				240A8E04273FE34500EBB82F /* TestBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

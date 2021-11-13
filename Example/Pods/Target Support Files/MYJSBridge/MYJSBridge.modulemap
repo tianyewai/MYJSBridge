@@ -1,0 +1,6 @@
+framework module MYJSBridge {
+  umbrella header "MYJSBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -22,7 +22,7 @@ pod 'MYJSBridge'
 
 ## Author
 
-tianyewai, cansing@163.com
+tianyewai
 
 ## License
 

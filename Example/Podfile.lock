@@ -1,0 +1,16 @@
+PODS:
+  - MYJSBridge (0.1.0)
+
+DEPENDENCIES:
+  - MYJSBridge (from `../`)
+
+EXTERNAL SOURCES:
+  MYJSBridge:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MYJSBridge: 8fd57dee1aacce0ddc204bc7722a80d08acbff62
+
+PODFILE CHECKSUM: e7a7d64f304159c0cc58009f77cd454cff98ac36
+
+COCOAPODS: 1.11.2

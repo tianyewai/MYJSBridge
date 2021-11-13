@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>native</title>
+    <style>
+    body {
+        padding: 10px 10px;
+    }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="require.min.js"></script>
+<!--    <script src="native.js"></script>-->
+    <script>
+    require(["native"]);
+    $(function() {
+        $("#appversion").bind("click", function() {
+            var str = native.call("appversion");
+            alert(str);
+        });
+        $("#appversionAsync").bind("click", function() {
+            native.call("appversionAsync", function(r) {
+                alert(r);
+            });
+        });
+        $("#finish").bind("click", function() {
+            native.call("finish");
+        });
+        $("#setItem").bind("click", function() {
+            native.setItem("a", {a:1, b:"2"});
+            native.setItem("b", "yang");
+            native.setItem("c", true);
+            native.setItem("d", new Date());
+        });
+        $("#getItem").bind("click", function() {
+            var r = native.getItem("a");
+            alert(typeof r + " " + r.a + " " + r.b);
+            r = native.getItem("b");
+            alert(typeof r + " " + r);
+            r = native.getItem("c");
+            alert(typeof r + " " + r);
+            r = native.getItem("d");
+            alert(typeof r + " " + r);
+            r = native.getItem("e");
+            alert(typeof r + " " + r);
+        });
+        $("#removeItem").bind("click", function() {
+            native.removeItem("a");
+        });
+    });
+</script>
+</head>
+<body>
+<div>
+    <input id="appversion" type="button" value="appversion"/>
+    <input id="appversionAsync" type="button" value="appversionAsync"/>
+    <input id="finish" type="button" value="finish"/>
+    <input id="setItem" type="button" value="setItem"/>
+    <input id="getItem" type="button" value="getItem"/>
+    <input id="removeItem" type="button" value="removeItem"/>
+</div>
+</body>
+</html>
