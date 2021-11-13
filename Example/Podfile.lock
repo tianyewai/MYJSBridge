@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MYJSBridge: 8fd57dee1aacce0ddc204bc7722a80d08acbff62
+  MYJSBridge: da9a82d306fdc968c88f01eb43ddd1e44b2f56cc
 
 PODFILE CHECKSUM: e7a7d64f304159c0cc58009f77cd454cff98ac36
 
